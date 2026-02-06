@@ -9,7 +9,7 @@ import HourlyForecast from '@/components/HourlyForecast';
 import AstroCard from '@/components/AstroCard';
 import WeatherAlerts from '@/components/WeatherAlerts';
 import GeolocationPrompt from '@/components/GeolocationPrompt';
-import { Loader2, CloudRain } from 'lucide-react';
+import { Loader2, CloudRain, Chrome, Github, Download, RefreshCw, MapPin as MapPinIcon } from 'lucide-react';
 
 type AppState = 'prompt' | 'loading' | 'ready' | 'error';
 
@@ -198,11 +198,60 @@ export default function Home() {
             {weather.forecast.forecastday[0] && (
               <AstroCard astro={weather.forecast.forecastday[0].astro} />
             )}
+
+            {/* Browser Extension Promo */}
+            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-md rounded-3xl p-4 sm:p-6 border border-purple-500/30 shadow-xl">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
+                    <Chrome className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Get the Browser Extension!</h3>
+                  <p className="text-white/70 text-sm sm:text-base mb-3">
+                    See weather at a glance with our Chrome/Edge extension. Features dynamic icons showing live temperature and conditions right in your toolbar.
+                  </p>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 text-xs sm:text-sm text-white/60">
+                    <span className="flex items-center gap-1"><RefreshCw className="w-3 h-3 sm:w-4 sm:h-4" /> Auto-updates every 3 hours</span>
+                    <span className="flex items-center gap-1"><MapPinIcon className="w-3 h-3 sm:w-4 sm:h-4" /> Geolocation support</span>
+                  </div>
+                </div>
+                <div className="flex-shrink-0">
+                  <a
+                    href="https://github.com/AyushDhimann/Wednesday-Assignment"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-xl bg-white/10 border border-white/20 text-white font-medium hover:bg-white/20 transition-colors text-sm sm:text-base"
+                  >
+                    <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <span>Get Extension</span>
+                  </a>
+                </div>
+              </div>
+              
+              {/* Setup Instructions */}
+              <div className="mt-4 pt-4 border-t border-white/10">
+                <details className="group">
+                  <summary className="cursor-pointer text-white/80 hover:text-white text-sm sm:text-base font-medium flex items-center gap-2">
+                    <span className="group-open:rotate-90 transition-transform">▶</span>
+                    Extension Setup Instructions
+                  </summary>
+                  <div className="mt-3 pl-4 sm:pl-6 text-white/60 text-xs sm:text-sm space-y-2">
+                    <p>1. Download the extension folder from <a href="https://github.com/AyushDhimann/Wednesday-Assignment" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">GitHub</a></p>
+                    <p>2. Open Chrome/Edge and go to <code className="bg-white/10 px-1 rounded">chrome://extensions/</code></p>
+                    <p>3. Enable "Developer mode" (toggle in top-right)</p>
+                    <p>4. Click "Load unpacked" and select the <code className="bg-white/10 px-1 rounded">extension/</code> folder</p>
+                    <p>5. Click the extension icon and allow location access!</p>
+                  </div>
+                </details>
+              </div>
+            </div>
           </div>
         )}
 
         {/* Footer */}
-        <footer className="mt-8 sm:mt-12 text-center text-white/40 text-xs sm:text-sm">
+        <footer className="mt-8 sm:mt-12 text-center text-white/40 text-xs sm:text-sm space-y-2">
           <p>
             Powered by{' '}
             <a
@@ -212,6 +261,17 @@ export default function Home() {
               className="underline hover:text-white/60"
             >
               WeatherAPI.com
+            </a>
+          </p>
+          <p className="flex items-center justify-center gap-2">
+            <Github className="w-4 h-4" />
+            <a
+              href="https://github.com/AyushDhimann/Wednesday-Assignment"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-white/60"
+            >
+              View on GitHub
             </a>
           </p>
         </footer>

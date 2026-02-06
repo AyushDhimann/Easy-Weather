@@ -1,5 +1,7 @@
 # Wednesday Hiring Assignment - Weather App
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/AyushDhimann/Wednesday-Assignment)
+
 A modern weather application featuring a standalone Next.js web app and a Chrome browser extension with dynamic icons.
 
 ## Features

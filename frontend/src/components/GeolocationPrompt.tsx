@@ -1,6 +1,6 @@
 'use client';
 
-import { MapPin, Navigation } from 'lucide-react';
+import { MapPin, Navigation, Chrome } from 'lucide-react';
 
 interface GeolocationPromptProps {
   onAllow: () => void;
@@ -44,6 +44,19 @@ export default function GeolocationPrompt({ onAllow, onManual }: GeolocationProm
         <p className="text-white/50 text-xs mt-4 sm:mt-6">
           Your location data is only used to fetch weather information and is never stored.
         </p>
+
+        {/* Extension promo */}
+        <div className="mt-6 pt-4 border-t border-white/10">
+          <a
+            href="https://github.com/AyushDhimann/Wednesday-Assignment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 text-xs sm:text-sm transition-colors"
+          >
+            <Chrome className="w-4 h-4" />
+            <span>Also available as a browser extension!</span>
+          </a>
+        </div>
       </div>
     </div>
   );
