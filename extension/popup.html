@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Setup View -->
+    <div id="setup-view" class="view">
+      <div class="setup-header">
+        <div class="logo">🌤️</div>
+        <h1>Weather Dashboard</h1>
+        <p class="subtitle">Get real-time weather updates</p>
+      </div>
+      
+      <div class="setup-content">
+        <button id="use-location-btn" class="btn btn-primary">
+          <span class="btn-icon">📍</span>
+          Use My Location
+        </button>
+        
+        <div class="divider">
+          <span>or</span>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" id="location-input" placeholder="Enter city name..." class="input">
+          <div id="search-results" class="search-results"></div>
+        </div>
+        
+        <button id="search-btn" class="btn btn-secondary">
+          <span class="btn-icon">🔍</span>
+          Search Location
+        </button>
+      </div>
+    </div>
+    
+    <!-- Weather View -->
+    <div id="weather-view" class="view hidden">
+      <div class="weather-header">
+        <div class="location-info">
+          <h2 id="location-name">--</h2>
+          <p id="location-region">--</p>
+        </div>
+        <button id="refresh-btn" class="icon-btn" title="Refresh">🔄</button>
+      </div>
+      
+      <div class="current-weather">
+        <div class="temp-display">
+          <img id="weather-icon" src="" alt="Weather" class="weather-icon">
+          <div class="temp-info">
+            <span id="current-temp" class="current-temp">--°</span>
+            <span id="feels-like" class="feels-like">Feels like --°</span>
+          </div>
+        </div>
+        <p id="condition-text" class="condition-text">--</p>
+      </div>
+      
+      <div class="weather-stats">
+        <div class="stat">
+          <span class="stat-icon">💧</span>
+          <span class="stat-label">Humidity</span>
+          <span id="humidity" class="stat-value">--%</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">💨</span>
+          <span class="stat-label">Wind</span>
+          <span id="wind" class="stat-value">-- km/h</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">👁️</span>
+          <span class="stat-label">Visibility</span>
+          <span id="visibility" class="stat-value">-- km</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">☀️</span>
+          <span class="stat-label">UV Index</span>
+          <span id="uv" class="stat-value">--</span>
+        </div>
+      </div>
+      
+      <div class="forecast-section">
+        <h3>3-Day Forecast</h3>
+        <div id="forecast" class="forecast-container"></div>
+      </div>
+      
+      <div id="air-quality" class="air-quality-section hidden">
+        <h3>Air Quality</h3>
+        <div class="aqi-bar">
+          <div id="aqi-indicator" class="aqi-indicator"></div>
+        </div>
+        <p id="aqi-text" class="aqi-text">--</p>
+      </div>
+      
+      <div class="footer">
+        <span id="last-update" class="last-update">Last updated: --</span>
+        <button id="reset-btn" class="btn-link">Reset Location</button>
+      </div>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Loading weather data...</p>
+    </div>
+    
+    <!-- Error Toast -->
+    <div id="error-toast" class="toast hidden">
+      <span id="error-message"></span>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
