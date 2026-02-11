@@ -12,13 +12,14 @@ A modern weather application featuring a standalone Next.js web app and a Chrome
 
 #### Extension Demo
 
-![Extension Demo](assets/Extension%20Demo.gif)
+<img src="assets/Extension%20Demo.gif" alt="Extension Demo" width="100%" />
 
 #### Extension Dynamic Icons
 
-![Extension Icon Example 1](assets/Extension-1.png)
-
-![Extension Icon Example 2](assets/Extension-2.png)
+<div>
+  <img src="assets/Extension-1.png" alt="Extension Icon Example 1" width="48%" style="display: inline-block; margin-right: 3%;" />
+  <img src="assets/Extension-2.png" alt="Extension Icon Example 2" width="48%" style="display: inline-block;" />
+</div>
 
 ## Features
 
