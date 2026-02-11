@@ -56,8 +56,7 @@ yarn.lock
 # Misc
 .DS_Store
 *.pem
-.env
-.env.example
+.env.local
 
 # IDE
 .vscode/settings.json
