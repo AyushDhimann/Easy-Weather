@@ -1,6 +1,6 @@
 # Easy Weather
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/AyushDhimann/Wednesday-Assignment)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/AyushDhimann/Easy-Weather)
 
 A modern weather application featuring a standalone Next.js web app and a Chrome browser extension with dynamic icons.
 

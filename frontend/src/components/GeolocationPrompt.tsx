@@ -48,7 +48,7 @@ export default function GeolocationPrompt({ onAllow, onManual }: GeolocationProm
         {/* Extension promo */}
         <div className="mt-6 pt-4 border-t border-white/10">
           <a
-            href="https://github.com/AyushDhimann/Wednesday-Assignment"
+            href="https://github.com/AyushDhimann/Easy-Weather"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 text-xs sm:text-sm transition-colors"

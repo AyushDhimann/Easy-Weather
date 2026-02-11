@@ -219,7 +219,7 @@ export default function Home() {
                 </div>
                 <div className="flex-shrink-0">
                   <a
-                    href="https://github.com/AyushDhimann/Wednesday-Assignment"
+                    href="https://github.com/AyushDhimann/Easy-Weather"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-xl bg-white/10 border border-white/20 text-white font-medium hover:bg-white/20 transition-colors text-sm sm:text-base"
@@ -238,7 +238,7 @@ export default function Home() {
                     Extension Setup Instructions
                   </summary>
                   <div className="mt-3 pl-4 sm:pl-6 text-white/60 text-xs sm:text-sm space-y-2">
-                    <p>1. Download the extension folder from <a href="https://github.com/AyushDhimann/Wednesday-Assignment" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">GitHub</a></p>
+                    <p>1. Download the extension folder from <a href="https://github.com/AyushDhimann/Easy-Weather" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">GitHub</a></p>
                     <p>2. Open Chrome/Edge and go to <code className="bg-white/10 px-1 rounded">chrome://extensions/</code></p>
                     <p>3. Enable "Developer mode" (toggle in top-right)</p>
                     <p>4. Click "Load unpacked" and select the <code className="bg-white/10 px-1 rounded">extension/</code> folder</p>
@@ -266,7 +266,7 @@ export default function Home() {
           <p className="flex items-center justify-center gap-2">
             <Github className="w-4 h-4" />
             <a
-              href="https://github.com/AyushDhimann/Wednesday-Assignment"
+              href="https://github.com/AyushDhimann/Easy-Weather"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-white/60"
